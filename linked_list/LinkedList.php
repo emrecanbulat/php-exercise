@@ -9,8 +9,6 @@ class LinkedList
         $this->head = null;
     }
 
-    // [head]->[]->null
-
     public function insertAtBack($data)
     {
         // create new node
@@ -41,7 +39,7 @@ class LinkedList
         }
     }
 
-    public function insertAfterCustom($data, $target)  // [head]->[]->[]->null
+    public function insertAfterCustom($data, $target)
     {
         // create new node
         $newNode = new Node();
