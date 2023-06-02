@@ -2,7 +2,7 @@
 
 class TreeNode
 {
-    public $data, $left, $right;
+    private $data, $left, $right;
 
     public function __construct()
     {

@@ -22,7 +22,7 @@ class Tree
         } else {
             $current = $this->root;
             while (true) {
-                if ($current->data >= $data) {
+                if ($current->getData() >= $data) {
                     if ($current->getLeft() == null) {
                         $current->setLeft($newNode);
                         echo $data . " added \n";
@@ -52,7 +52,7 @@ class Tree
         if ($current->getLeft() != null) {
             $this->listTree($current->getLeft());
         }
-        echo $current->data . "\n"; //inorder
+        echo $current->getData() . "\n"; //inorder
         if ($current->getRight() != null) {
             $this->listTree($current->getRight());
         }
@@ -64,11 +64,11 @@ class Tree
         if ($current == null) {
             $current = $this->root;
         }
-        if ($search == $current->data) {
+        if ($search == $current->getData()) {
             echo $search . " found\n";
-        } else if ($search > $current->data && $current->getRight() != null) {
+        } else if ($search > $current->getData() && $current->getRight() != null) {
             $this->search($search, $current->getRight());
-        } else if ($search < $current->data && $current->getLeft() != null) {
+        } else if ($search < $current->getData() && $current->getLeft() != null) {
             $this->search($search, $current->getLeft());
         } else {
             echo $search . " not found\n";
